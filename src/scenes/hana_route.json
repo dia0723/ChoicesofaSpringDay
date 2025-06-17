@@ -1,0 +1,92 @@
+{
+  "scene": [
+    {
+      "speaker": "하나",
+      "text": "오늘 도서관 같이 갈래? 공부도 하고, 얘기도 좀 하고 싶어서...",
+      "background": "bg/classroom.jpg",
+      "character": "characters/hana_stand.png"
+    },
+    {
+      "choices": [
+        {
+          "text": "좋아, 함께 가자.",
+          "next": "accept_study",
+          "affection": { "hana": 10 }
+        },
+        {
+          "text": "미안, 오늘은 좀 쉬고 싶어.",
+          "next": "decline_study",
+          "affection": { "hana": -5 }
+        }
+      ]
+    }
+  ],
+
+  "accept_study": [
+    {
+      "speaker": "하나",
+      "text": "정말? 같이 공부하면 재미있을 거야!",
+      "background": "bg/library.jpg",
+      "character": "characters/hana_happy.png"
+    },
+    {
+      "speaker": "주인공",
+      "text": "네가 있으니까 집중도 잘 되네.",
+      "character": ""
+    },
+    {
+      "conditional": {
+        "affection.hana": ">=10",
+        "next": "confession"
+      }
+    }
+  ],
+
+  "decline_study": [
+    {
+      "speaker": "하나",
+      "text": "아... 알겠어. 다음에 또 기회가 있겠지.",
+      "character": "characters/hana_sad.png"
+    },
+    {
+      "speaker": "주인공",
+      "text": "(조금 미안한 마음이 든다...)"
+    }
+  ],
+
+  "confession": [
+    {
+      "speaker": "하나",
+      "text": "사실, 요즘 너랑 있는 시간이 제일 좋아.",
+      "character": "characters/hana_blush.png"
+    },
+    {
+      "choices": [
+        {
+          "text": "나도 그래. 네가 좋아.",
+          "next": "ending_true"
+        },
+        {
+          "text": "그런 마음인지 몰랐어... 좀 생각할게.",
+          "next": "ending_neutral"
+        }
+      ]
+    }
+  ],
+
+  "ending_true": [
+    {
+      "speaker": "",
+      "text": "두 사람은 조용한 도서관에서 마음을 나눴다. [하나 루트: 해피엔딩]",
+      "background": "bg/library.jpg"
+    }
+  ],
+
+  "ending_neutral": [
+    {
+      "speaker": "",
+      "text": "서로 어색한 침묵이 흘렀다. 그리고 시간이 천천히 흐르기 시작했다. [하나 루트: 노멀엔딩]",
+      "background": "bg/library.jpg"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "speaker": "",
+    "text": "조용한 교실, 오전 8시.",
+    "background": "bg/classroom.jpg",
+    "character": ""
+  },
+  {
+    "speaker": "주인공",
+    "text": "오늘은 뭔가... 특별한 일이 생길 것 같은 기분이다.",
+    "background": "",
+    "character": ""
+  },
+  {
+    "speaker": "유리",
+    "text": "안녕! 벌써 와 있었네?",
+    "background": "",
+    "character": "characters/yuri_stand.png"
+  },
+  {
+    "speaker": "주인공",
+    "text": "(유리다... 어릴 적 소꿉친구.)",
+    "character": ""
+  }
+]

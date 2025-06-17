@@ -1,0 +1,16 @@
+<div id="character-container">
+<img id="character-left" class="character" />
+<img id="character-center" class="character" />
+<img id="character-right" class="character" />
+
+</div> }
+
+.character.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.character.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}</div>

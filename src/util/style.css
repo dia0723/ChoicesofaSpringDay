@@ -1,0 +1,17 @@
+#character-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    pointer-events: none; /* 클릭 방지 */
+}
+
+.character {
+    max-height: 100%;
+    max-width: 33%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}

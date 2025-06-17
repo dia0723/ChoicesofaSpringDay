@@ -1,0 +1,92 @@
+{
+  "scene": [
+    {
+      "speaker": "미나",
+      "text": "오늘 날씨 죽이는데? 수업 빼고 운동장 한 바퀴 돌래?",
+      "background": "bg/classroom.jpg",
+      "character": "characters/mina_stand.png"
+    },
+    {
+      "choices": [
+        {
+          "text": "좋지! 간만에 운동 좀 하자.",
+          "next": "go_outside",
+          "affection": { "mina": 10 }
+        },
+        {
+          "text": "미안, 수업은 들어야지...",
+          "next": "stay_inside",
+          "affection": { "mina": -5 }
+        }
+      ]
+    }
+  ],
+
+  "go_outside": [
+    {
+      "speaker": "미나",
+      "text": "그래! 넌 역시 내 스타일이야!",
+      "background": "bg/schoolyard.jpg",
+      "character": "characters/mina_happy.png"
+    },
+    {
+      "speaker": "주인공",
+      "text": "이런 날엔 바람 맞으면서 걷는 것도 괜찮네.",
+      "character": ""
+    },
+    {
+      "conditional": {
+        "affection.mina": ">=10",
+        "next": "confession"
+      }
+    }
+  ],
+
+  "stay_inside": [
+    {
+      "speaker": "미나",
+      "text": "쳇, 재미없긴... 뭐 어쩔 수 없지.",
+      "character": "characters/mina_annoyed.png"
+    },
+    {
+      "speaker": "주인공",
+      "text": "(미나가 조금 실망한 것 같다...)"
+    }
+  ],
+
+  "confession": [
+    {
+      "speaker": "미나",
+      "text": "있지… 나, 너랑 있으면 왠지 맘이 편해져.",
+      "character": "characters/mina_blush.png"
+    },
+    {
+      "choices": [
+        {
+          "text": "나도 그래, 미나.",
+          "next": "ending_true"
+        },
+        {
+          "text": "그런 줄 몰랐네. 생각 좀 해볼게.",
+          "next": "ending_neutral"
+        }
+      ]
+    }
+  ],
+
+  "ending_true": [
+    {
+      "speaker": "",
+      "text": "운동장을 거닐던 두 사람은 그렇게 조금씩 가까워졌다. [미나 루트: 해피엔딩]",
+      "background": "bg/schoolyard.jpg"
+    }
+  ],
+
+  "ending_neutral": [
+    {
+      "speaker": "",
+      "text": "미나는 고개를 돌렸지만, 어딘가 웃고 있었다. [미나 루트: 노멀엔딩]",
+      "background": "bg/schoolyard.jpg"
+    }
+  ]
+}
